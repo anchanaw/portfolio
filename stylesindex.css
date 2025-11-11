@@ -1,0 +1,219 @@
+html {
+    scroll-behavior: smooth;/* ทำให้เลื่อนนุ่ม */
+}
+
+@import url(https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap);
+
+body {
+    margin: 0;
+    font-family: Merriweather, sans-serif;
+    
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #222;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff9800;
+}
+
+section {
+    height: 100vh;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: white;
+}
+
+#home {
+  background: linear-gradient(to bottom, #7b95f5, #7557f8);
+}
+
+#about {
+  background: linear-gradient(to bottom, #7557f8, #9261d2);
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.detail-about {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff22;
+    padding: 60px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    width: 90%;
+    gap: 40px;
+}
+
+.detail-about img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-text {
+    font-family: Kodchasan, sans-serif;
+    font-size: 3rem;
+    line-height: 1.8;
+}
+
+.detail-about p {
+    display: block;
+    margin: 5px 0;
+    font-size: 2rem;
+}
+
+#skills {
+  background: linear-gradient(to bottom, #9261d2, #f557e5);
+    padding: 50px;
+    display: flex;
+    justify-content: center
+}
+
+.detail-skill {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff22;
+    padding: 60px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    width: 90%;
+    gap: 40px;
+}
+
+.skill-text {
+    font-family: Kodchasan, sans-serif;
+}
+
+.detail-skill h4 {
+    display: block;
+    margin: 5px 0;
+    font-size: 2rem;
+}
+
+.detail-skill p {
+    display: block;
+    margin: 5px 0 5px 30px;
+    font-size: 1.5rem;
+}
+
+#projects {
+  background: linear-gradient(to bottom, #f557e5, #ed4c9a);
+    padding: 50px;
+    display: flex;
+    justify-content: center
+}
+.detail-projects {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff22;
+    padding: 60px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    width: 90%;
+    gap: 40px;
+}
+.projects-text {
+    font-family: Kodchasan, sans-serif;
+}
+.detail-projects h1 {
+    display: block;
+    margin: 5px 0;
+    font-size: 3rem;
+}
+.detail-projects p {
+    display: block;
+    margin: 5px 0 5px 30px; 
+    font-size: 1.5rem;
+}
+#video {
+  background: #f5f5f5;
+  padding: 80px;
+  text-align: center;
+  
+}
+
+.video-container iframe {
+  width: 80%;
+  height: 450px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+#contact {
+  background: #ed4c9a;
+    padding: 50px;
+    display: flex;
+    justify-content: center
+}
+.detail-contact {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff22;
+    padding: 60px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    width: 90%;
+    gap: 40px;
+}
+.detail-contact h1 {
+    display: block;
+    margin: 5px 0;
+    
+}
+.contact-item {
+  display: flex;          
+  align-items: center;    
+  gap: 20px;              
+  justify-content: flex-start; 
+  margin: 15px 50px;
+}
+
+.contact-item img {
+  width: 60px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.contact-item p {
+  font-size: 2rem;
+  margin: 0;
+}
+.detail-contact p {
+    display: block;
+    margin: 5px 0;
+    font-size: 2rem;
+}
+a {
+  color: #ffffff;         
+  text-decoration: none;   /* เอาเส้นใต้ลิงก์ออก */
+  transition: color 0.3s;  
+}
+
+a:hover {
+  color: #ffd700;           
+}
+
