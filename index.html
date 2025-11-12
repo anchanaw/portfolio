@@ -22,30 +22,59 @@
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>        
         <a href="#experience">Work experience</a>
+        <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
     </nav>
 
     <section id="home">
-        <h1>Welcome to My Portfolio</h1>
+        <div class="detail-home">
+            <h1>Welcome to My Portfolio</h1>
+            <h1>I am an intern in the Front-end position</h1>
+        </div> 
     </section>
 
     <section id="about">
         <div class="detail-about">
-            <img src="D:\portfolio\img\IMG_20251027_135547_223.webp" alt="me">
-            <div class="about-text">
-                <p>ชื่อ : อัญชนา วรรณะ</p>
-                <p>ชื่อเล่น : จิว</p>
-                <p>อายุ : 22</p>
-                <p>วันเกิด : 27 กรกฎาคม 2546</p>
+
+            <!-- 🧍‍♀️ การ์ดข้อมูลส่วนตัว -->
+            <div class="about-card">
+                <img src="img\IMG_20251027_135547_223.webp" alt="me">
+                <div class="about-text">
+                    <h2>👩‍💼 About Me</h2>
+                    <p>ชื่อ : อัญชนา วรรณะ</p>
+                    <p>ชื่อเล่น : จิว</p>
+                    <p>อายุ : 22 ปี</p>
+                    <p>วันเกิด : 27 กรกฎาคม 2546</p>
+                </div>
             </div>
+
+            <div class="about-card hobbies">
+                <h2>🎨 Hobbies</h2>
+                <ul>
+                    <li>ฟังเพลง Lo-fi และเพลงช้า ๆ</li>
+                    <li>ออกแบบเว็บไซต์</li>
+                    <li>วาดภาพและถ่ายรูปธรรมชาติ</li>
+                    <img src="img\IMG20250501174320 copy.webp" alt="natural">
+                </ul>
+            </div>
+
+            <div class="about-card favorite-music">
+                <h2>🎵 Favorite Music</h2>
+                <p>เพลงนี้ช่วยให้ฉันรู้สึกผ่อนคลายเวลาทำงานหรือเขียนโค้ด 🎧</p>
+                <iframe src="https://www.youtube.com/embed/1QkX7Qetu2Q" title="Favorite Music" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
         </div>
     </section>
 
     <section id="skills">
         <div class="detail-skill">
             <div class="skill-text">
+                <h1>💻 SkillS</h1>
                 <h4>ทักษะโปรแกรมพื้นฐาน</h4>
                 <p> - Microsoft Word , Exel , PowerPoint</p>
                 <h4>ทักษะภาษาคอมพิวเตอรื</h4>
@@ -61,28 +90,10 @@
         </div>
     </section>
 
-    <section id="projects">
-        <div class="detail-projects">
-            <div class="projects-text">
-                <h1>My Project</h1>
-                <p>ระบบจองโต๊ะร้านชาบูจึงถูกพัฒนาขึ้นมาเพื่อช่วยในด้านความสะดวกในการจองโต๊ะล่วงหน้า
-                    ลดเวลาการรอคิว และเพิ่มประสิทธิภาพการจัดการภายในร้าน ระบบนี้ยังช่วยให้ลูกค้าได้รับข้อมูลที่ครบถ้วน
-                    เช่น สถานะความว่างของโต๊ะ โปรโมชั่น และข้อมูลการติดต่อร้าน
-                </p>
-                <p>ตัวอย่างการใช้งาน</p>
-                <video width="640" height="360" controls>
-                    <source src="https://drive.google.com/file/d/1h6kqzxWeHmosftCHHrRCfiEucs3spFz2/view?usp=sharing" type="video/mp4">
-                    เบราว์เซอร์ของคุณไม่รองรับ video tag
-                </video>
-                <h1></h1>
-            </div>
-        </div>
-    </section>
-
     <section id="experience">
         <div class="detail-experience">
             <div class="experience-text">
-                <h1>Work experience</h1>
+                <h1>📋 Work experience</h1>
                 <table class="styled-table">
                     <thead>
                         <tr>
@@ -102,40 +113,62 @@
                         <tr>
                             <td>2658</td>
                             <td>พัฒนาเว็บจองโต๊ะร้านชาบู</td>
-                            
+
                         </tr>
                         <tr>
                             <td></td>
                             <td>วิทยานิพนธ์
-       หัวข้อ : การจำแนกโรคใบหงิกเหลือง โรคใบด่างและโรคใบรา ในมะเขือเทศด้วยการประมวลผลภาพและปัญญาประดิษฐ</td>
+                                หัวข้อ : การจำแนกโรคใบหงิกเหลือง โรคใบด่างและโรคใบรา
+                                ในมะเขือเทศด้วยการประมวลผลภาพและปัญญาประดิษฐ</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </section>
+    <section id="projects">
+        <div class="detail-projects">
+            <div class="projects-text">
+                <h1>📂 My Project : ระบบจองโต๊ะร้านชาบู</h1>
+                <p>ระบบจองโต๊ะร้านชาบูจึงถูกพัฒนาขึ้นมาเพื่อช่วยในด้านความสะดวกในการจองโต๊ะล่วงหน้า
+                    ลดเวลาการรอคิว และเพิ่มประสิทธิภาพการจัดการภายในร้าน ระบบนี้ยังช่วยให้ลูกค้าได้รับข้อมูลที่ครบถ้วน
+                    เช่น สถานะความว่างของโต๊ะ โปรโมชั่น และข้อมูลการติดต่อร้าน
+                </p>
+                <p>ตัวอย่างการใช้งาน</p>
+                <iframe src="https://drive.google.com/file/d/1h6kqzxWeHmosftCHHrRCfiEucs3spFz2/preview" width="640"
+                    height="800" allow="autoplay"></iframe>
+
+                <h1></h1>
+            </div>
+        </div>
+    </section>
+
     <section id="contact">
         <div class="detail-contact">
             <div class="contact-text">
-                <h1>Contact Me</h1>
+                <h1>📞 Contact Me</h1>
                 <div class="contact-item">
-                    <img src="D:\portfolio\img\icons8-call-48 (1).png" alt="call">
+                    <img src="img\icons8-call-48 (1).webp" alt="call">
                     <p>090-287-2549</p>
                 </div>
                 <div class="contact-item">
-                    <img src="D:\portfolio\img\icons8-gmail-48.png" alt="email">
+                    <img src="img\icons8-gmail-48.webp" alt="email">
                     <p>anchanaw65@nu.ac.th</p>
                 </div>
                 <div class="contact-item">
-                    <img src="D:\portfolio\img\icons8-github-94.png" alt="github">
+                    <img src="img\icons8-line-48.webp" alt="line">
+                    <p>aunchana_jj</p>
+                </div>
+                <div class="contact-item">
+                    <img src="img\icons8-github-94.webp" alt="github">
                     <a href="https://github.com/anchanaw">anchanaw</a>
                 </div>
                 <div class="contact-item">
-                    <img src="D:\portfolio\img\facebook.png" alt="facebook">
+                    <img src="img\facebook.webp" alt="facebook">
                     <a href="https://www.facebook.com/jiew.anchana">Jiew Anchana</a>
                 </div>
                 <div class="contact-item">
-                    <img src="D:\portfolio\img\instagram.png" alt="instagram">
+                    <img src="img\instagram.webp" alt="instagram">
                     <a href="https://www.instagram.com/jixway_nx/">jixway_nx</a>
                 </div>
             </div>

@@ -1,8 +1,3 @@
-/* ------------------------------
- 🌈 Portfolio Styles (Pro Version)
- Author: Anchana Wanna
------------------------------- */
-
 /* 💡 Smooth scroll */
 html {
   scroll-behavior: smooth;
@@ -30,7 +25,7 @@ html {
 ------------------------------ */
 body {
   margin: 0;
-  font-family: "Merriweather", sans-serif;
+  font-family: "Kodchasan", sans-serif;
   color: var(--text-dark);
   background-color: #fdfdfd;
 }
@@ -53,6 +48,7 @@ nav a {
   color: var(--white);
   text-decoration: none;
   margin: 0 20px;
+  height: 60px; /* ความสูง nav */
   font-weight: 600;
   font-family: "Kodchasan", sans-serif;
   transition: color 0.3s ease;
@@ -64,29 +60,47 @@ nav a:hover {
 
 /* ป้องกันเนื้อหาถูกบังโดย nav */
 section {
-  scroll-margin-top: 90px;
   min-height: 100vh;
-  padding: 100px 30px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* กึ่งกลางแนวนอน */
+  align-items: flex-start; /* อยู่ด้านบนแนวตั้ง */
+  padding: 20px 30px; /* padding-top น้อย ๆ */
+  scroll-margin-top: 65px; /* สำหรับ scroll anchor */
   color: var(--text-light);
   transition: background 0.5s ease;
 }
 
+.detail-about,
+.detail-skill,
+.detail-projects,
+.detail-contact {
+  scroll-margin-top: 45px; /* เว้นเล็กน้อยพอให้ scroll ไม่ชน nav */
+}
 /* ------------------------------
  🏠 Home Section
 ------------------------------ */
+
 #home {
-  background: linear-gradient(to bottom, var(--primary), var(--secondary));
+  height: 100vh; /* เต็มหน้าจอ */
+  display: flex;
+  justify-content: center; /* กลางแนวนอน */
+  align-items: center;     /* กลางแนวตั้ง */
   text-align: center;
-  animation: fadeIn 1s ease;
+  background: linear-gradient(to bottom, var(--primary), var(--secondary));
+  color: white;
+  padding: 0 20px; /* ระยะด้านข้างเล็กน้อย */
 }
 
 #home h1 {
   font-family: "Kodchasan", sans-serif;
   font-size: clamp(2rem, 4vw + 1rem, 4rem);
   color: var(--white);
+  margin: 5px;
+}
+
+.detail-home h1 {
+  margin: 10px 0;
+  font-size: clamp(1.5rem, 3vw + 1rem, 3rem); /* ขนาดปรับตามหน้าจอ */
 }
 
 /* ------------------------------
@@ -94,31 +108,97 @@ section {
 ------------------------------ */
 #about {
   background: linear-gradient(to bottom, var(--secondary), #9261d2);
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
 }
 
 .detail-about {
-  display: flex;
-  align-items: center;
   background-color: var(--bg-glass);
-  padding: 60px;
+  padding: 30px; /* ลดจาก 60px เพื่อให้เนื้อหาใกล้ nav */
   border-radius: 20px;
   box-shadow: var(--shadow);
-  gap: 40px;
+  color: var(--white);
   width: 90%;
   backdrop-filter: blur(6px);
   animation: fadeUp 0.8s ease;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  gap: 30px;
+  flex-wrap: wrap;
+  scroll-margin-top: 10px; /* เว้นเล็กน้อยพอไม่ชน nav */
 }
 
-.detail-about img {
-  width: 280px;
+
+/* 🎴 การ์ดแต่ละใบ */
+.about-card {
+  flex: 1;
+  min-width: 280px;
+  background-color: rgba(255, 255, 255, 0.08);
   border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  padding: 25px;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.about-text {
+
+
+.about-card h2 {
+  color: #ffd700;
   font-family: "Kodchasan", sans-serif;
-  font-size: clamp(1.2rem, 1.5vw + 0.5rem, 2rem);
-  line-height: 1.6;
+  margin-bottom: 15px;
 }
+
+/* 🧍‍♀️ Card About Me */
+.about-card img {
+  width: 200px;
+  border-radius: 15px;
+  margin-bottom: 5px;
+}
+
+.about-text p {
+  margin: 5px 0;
+  font-size: 1.2rem;
+}
+
+/* 🎨 Card Hobbies */
+.hobbies ul {
+  list-style-type: circle;
+  text-align: left;
+  padding-left: 20px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* 🎵 Card Favorite Music */
+.favorite-music iframe {
+  width: 100%;
+  max-width: 400px;
+  height: 230px;
+  border-radius: 12px;
+  margin-top: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 📱 Responsive */
+@media (max-width: 1024px) {
+  .about-card {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-card {
+    flex: 1 1 90%;
+  }
+}
+
 
 /* ------------------------------
  💻 Skills Section
@@ -142,6 +222,11 @@ section {
   font-family: "Kodchasan", sans-serif;
 }
 
+.detail-skill h1 {
+  font-size: 3rem;
+  margin: 15px 0 10px;
+}
+
 .detail-skill h4 {
   font-size: 1.8rem;
   margin: 15px 0 10px;
@@ -156,7 +241,8 @@ section {
  🧩 Projects Section
 ------------------------------ */
 #projects {
-  background: linear-gradient(to bottom, #f557e5, #f557c8);
+  background: linear-gradient(to bottom, #f557c8, var(--accent));
+
 }
 
 .detail-projects {
@@ -185,7 +271,7 @@ section {
   display: block;
   margin: 30px auto 0;
   width: 80%;
-  height: 400px;
+  height: 600px;
   border-radius: 15px;
   box-shadow: var(--shadow);
 }
@@ -194,7 +280,7 @@ section {
  🧩 experience Section
 ------------------------------ */
 #experience {
-  background: linear-gradient(to bottom, #f557c8, var(--accent));
+  background: linear-gradient(to bottom, #f557e5, #f557c8);
 }
 
 .detail-experience {
@@ -207,6 +293,10 @@ section {
   text-align: left;
   backdrop-filter: blur(6px);
   animation: fadeUp 0.8s ease;
+}
+
+.experience-text {
+  font-family: "Kodchasan", sans-serif;
 }
 
 .detail-experience h1 {
@@ -223,7 +313,7 @@ section {
 
 .detail-contact {
   background-color: var(--bg-glass);
-  padding: 60px;
+  padding: 60px ;
   border-radius: 20px;
   box-shadow: var(--shadow);
   color: var(--white);
@@ -231,24 +321,28 @@ section {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 25px;
+  /* เว้นระยะห่างเท่ากันระหว่างแต่ละ contact-item */
   backdrop-filter: blur(6px);
   animation: fadeUp 0.8s ease;
-}
-
-.detail-contact h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
 }
 
 .contact-item {
   display: flex;
   align-items: center;
-  gap: 20px;
-  margin: 10px 0;
+  gap: 20px;       /* ระยะห่างแนวนอนระหว่าง icon กับข้อความ */
+  width: 100%;
+  margin-left: 60px; /* ปรับค่าตามต้องการ */
+  padding: 20px 0; /* เพิ่มระยะห่างบน-ล่างเท่ากัน */
+  border-bottom: 1px solid rgba(255,255,255,0.2); /* อันนี้ใส่หรือไม่ก็ได้สำหรับแบ่งไอเท็ม */
+}
+
+.contact-item:last-child {
+  border-bottom: none; /* ลบเส้นขีดล่างไอเท็มสุดท้าย */
 }
 
 .contact-item img {
-  width: 50px;
+  width: 30px;
   border-radius: 10px;
 }
 
@@ -287,7 +381,7 @@ section {
 
   .detail-projects iframe {
     width: 100%;
-    height: 300px;
+    height: 600px;
   }
 
   nav a {
@@ -328,7 +422,7 @@ section {
   /* ยุบเส้นขอบตาราง */
   margin: 25px 0;
   font-size: 1.5em;
-  font-family: sans-serif;
+  font-family: "Kodchasan", sans-serif;
   min-width: 400px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   /* เพิ่มบรรทัดนี้: กรอบรอบตารางหลัก */
