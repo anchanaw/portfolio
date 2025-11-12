@@ -8,25 +8,13 @@ html {
 ------------------------------ */
 @import url("https://fonts.googleapis.com/css2?family=Kodchasan:wght@300;400;500;600&family=Merriweather:wght@300;400;700&display=swap");
 
-:root {
-  --primary: #7b95f5;
-  --secondary: #7557f8;
-  --accent: #ed4c9a;
-  --highlight: #ffd700;
-  --white: #ffffff;
-  --bg-glass: #ffffff22;
-  --text-light: #ffffff;
-  --text-dark: #222;
-  --shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-}
-
 /* ------------------------------
  🧱 Base Styles
 ------------------------------ */
 body {
   margin: 0;
   font-family: "Kodchasan", sans-serif;
-  color: var(--text-dark);
+  color: #222;
   background-color: #fdfdfd;
 }
 
@@ -37,36 +25,36 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: var(--text-dark);
+  background-color: #222;
   padding: 15px 0;
   text-align: center;
   z-index: 1000;
-  box-shadow: var(--shadow);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 nav a {
-  color: var(--white);
+  color: #fff;
   text-decoration: none;
   margin: 0 20px;
-  height: 60px; /* ความสูง nav */
+  height: 60px;
   font-weight: 600;
   font-family: "Kodchasan", sans-serif;
   transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: var(--highlight);
+  color: #ffd700;
 }
 
 /* ป้องกันเนื้อหาถูกบังโดย nav */
 section {
   min-height: 100vh;
   display: flex;
-  justify-content: center; /* กึ่งกลางแนวนอน */
-  align-items: flex-start; /* อยู่ด้านบนแนวตั้ง */
-  padding: 20px 30px; /* padding-top น้อย ๆ */
-  scroll-margin-top: 65px; /* สำหรับ scroll anchor */
-  color: var(--text-light);
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 30px;
+  scroll-margin-top: 65px;
+  color: #fff;
   transition: background 0.5s ease;
 }
 
@@ -74,62 +62,59 @@ section {
 .detail-skill,
 .detail-projects,
 .detail-contact {
-  scroll-margin-top: 45px; /* เว้นเล็กน้อยพอให้ scroll ไม่ชน nav */
+  scroll-margin-top: 45px;
 }
+
 /* ------------------------------
  🏠 Home Section
 ------------------------------ */
-
 #home {
-  height: 100vh; /* เต็มหน้าจอ */
+  height: 100vh;
   display: flex;
-  justify-content: center; /* กลางแนวนอน */
-  align-items: center;     /* กลางแนวตั้ง */
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  background: linear-gradient(to bottom, var(--primary), var(--secondary));
-  color: white;
-  padding: 0 20px; /* ระยะด้านข้างเล็กน้อย */
+  background: linear-gradient(to bottom, #7b95f5, #7557f8);
+  color: #fff;
+  padding: 0 20px;
 }
 
 #home h1 {
   font-family: "Kodchasan", sans-serif;
-  font-size: clamp(2rem, 4vw + 1rem, 4rem);
-  color: var(--white);
+  font-size: 3rem;
+  color: #fff;
   margin: 5px;
 }
 
 .detail-home h1 {
   margin: 10px 0;
-  font-size: clamp(1.5rem, 3vw + 1rem, 3rem); /* ขนาดปรับตามหน้าจอ */
+  font-size: 2.5rem;
 }
 
 /* ------------------------------
  👩‍💼 About Section
 ------------------------------ */
 #about {
-  background: linear-gradient(to bottom, var(--secondary), #9261d2);
+  background: linear-gradient(to bottom, #7557f8, #9261d2);
   padding: 80px 0;
   display: flex;
   justify-content: center;
 }
 
 .detail-about {
-  background-color: var(--bg-glass);
-  padding: 30px; /* ลดจาก 60px เพื่อให้เนื้อหาใกล้ nav */
+  background-color: rgba(255, 255, 255, 0.13);
+  padding: 30px;
   border-radius: 20px;
-  box-shadow: var(--shadow);
-  color: var(--white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  color: #fff;
   width: 90%;
-  backdrop-filter: blur(6px);
-  animation: fadeUp 0.8s ease;
   display: flex;
   justify-content: space-around;
   align-items: stretch;
   gap: 30px;
   flex-wrap: wrap;
-  scroll-margin-top: 10px; /* เว้นเล็กน้อยพอไม่ชน nav */
+  scroll-margin-top: 10px;
 }
-
 
 /* 🎴 การ์ดแต่ละใบ */
 .about-card {
@@ -147,15 +132,12 @@ section {
   align-items: center;
 }
 
-
-
 .about-card h2 {
   color: #ffd700;
   font-family: "Kodchasan", sans-serif;
   margin-bottom: 15px;
 }
 
-/* 🧍‍♀️ Card About Me */
 .about-card img {
   width: 200px;
   border-radius: 15px;
@@ -167,7 +149,6 @@ section {
   font-size: 1.2rem;
 }
 
-/* 🎨 Card Hobbies */
 .hobbies ul {
   list-style-type: circle;
   text-align: left;
@@ -176,7 +157,6 @@ section {
   line-height: 1.8;
 }
 
-/* 🎵 Card Favorite Music */
 .favorite-music iframe {
   width: 100%;
   max-width: 400px;
@@ -199,7 +179,6 @@ section {
   }
 }
 
-
 /* ------------------------------
  💻 Skills Section
 ------------------------------ */
@@ -208,18 +187,12 @@ section {
 }
 
 .detail-skill {
-  background-color: var(--bg-glass);
+  background-color: rgba(255, 255, 255, 0.13);
   padding: 60px;
   border-radius: 20px;
-  box-shadow: var(--shadow);
-  color: var(--white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  color: #fff;
   width: 90%;
-  backdrop-filter: blur(6px);
-  animation: fadeUp 0.8s ease;
-}
-
-.skill-text {
-  font-family: "Kodchasan", sans-serif;
 }
 
 .detail-skill h1 {
@@ -241,20 +214,17 @@ section {
  🧩 Projects Section
 ------------------------------ */
 #projects {
-  background: linear-gradient(to bottom, #f557c8, var(--accent));
-
+  background: linear-gradient(to bottom, #f557c8, #ed4c9a);
 }
 
 .detail-projects {
-  background-color: var(--bg-glass);
+  background-color: rgba(255, 255, 255, 0.13);
   padding: 60px;
   border-radius: 20px;
-  box-shadow: var(--shadow);
-  color: var(--white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  color: #fff;
   width: 90%;
   text-align: left;
-  backdrop-filter: blur(6px);
-  animation: fadeUp 0.8s ease;
 }
 
 .detail-projects h1 {
@@ -273,30 +243,24 @@ section {
   width: 80%;
   height: 600px;
   border-radius: 15px;
-  box-shadow: var(--shadow);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 /* ------------------------------
- 🧩 experience Section
+ 🧩 Experience Section
 ------------------------------ */
 #experience {
   background: linear-gradient(to bottom, #f557e5, #f557c8);
 }
 
 .detail-experience {
-  background-color: var(--bg-glass);
+  background-color: rgba(255, 255, 255, 0.13);
   padding: 60px;
   border-radius: 20px;
-  box-shadow: var(--shadow);
-  color: var(--white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  color: #fff;
   width: 90%;
   text-align: left;
-  backdrop-filter: blur(6px);
-  animation: fadeUp 0.8s ease;
-}
-
-.experience-text {
-  font-family: "Kodchasan", sans-serif;
 }
 
 .detail-experience h1 {
@@ -305,40 +269,66 @@ section {
 }
 
 /* ------------------------------
+ 🧾 Styled Table
+------------------------------ */
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 1.2em;
+  font-family: "Kodchasan", sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid #cccccc;
+}
+
+.styled-table thead tr {
+  background-color: #eb13ae;
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  border-right: 1px solid #dddddd;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+/* ------------------------------
  ☎️ Contact Section
 ------------------------------ */
 #contact {
-  background: var(--accent);
+  background: #ed4c9a;
 }
 
 .detail-contact {
-  background-color: var(--bg-glass);
-  padding: 60px ;
+  background-color: rgba(255, 255, 255, 0.13);
+  padding: 60px;
   border-radius: 20px;
-  box-shadow: var(--shadow);
-  color: var(--white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  color: #fff;
   width: 90%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 25px;
-  /* เว้นระยะห่างเท่ากันระหว่างแต่ละ contact-item */
-  backdrop-filter: blur(6px);
-  animation: fadeUp 0.8s ease;
 }
 
 .contact-item {
   display: flex;
   align-items: center;
-  gap: 20px;       /* ระยะห่างแนวนอนระหว่าง icon กับข้อความ */
+  gap: 20px;
   width: 100%;
-  margin-left: 60px; /* ปรับค่าตามต้องการ */
-  padding: 20px 0; /* เพิ่มระยะห่างบน-ล่างเท่ากัน */
-  border-bottom: 1px solid rgba(255,255,255,0.2); /* อันนี้ใส่หรือไม่ก็ได้สำหรับแบ่งไอเท็ม */
+  margin-left: 60px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .contact-item:last-child {
-  border-bottom: none; /* ลบเส้นขีดล่างไอเท็มสุดท้าย */
+  border-bottom: none;
 }
 
 .contact-item img {
@@ -349,13 +339,13 @@ section {
 .contact-item a,
 .contact-item p {
   font-size: 1.4rem;
-  color: var(--white);
+  color: #fff;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .contact-item a:hover {
-  color: var(--highlight);
+  color: #ffd700;
 }
 
 /* ------------------------------
@@ -388,64 +378,4 @@ section {
     margin: 0 10px;
     font-size: 0.9rem;
   }
-}
-
-/* ------------------------------
- ✨ Animation Effects
------------------------------- */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.styled-table {
-  border-collapse: collapse;
-  /* ยุบเส้นขอบตาราง */
-  margin: 25px 0;
-  font-size: 1.5em;
-  font-family: "Kodchasan", sans-serif;
-  min-width: 400px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-  /* เพิ่มบรรทัดนี้: กรอบรอบตารางหลัก */
-  border: 1px solid #cccccc;
-}
-
-.styled-table thead tr {
-  background-color: #eb13ae;
-  /* สีพื้นหลังหัวตาราง */
-  color: #ffffff;
-  /* สีตัวอักษรหัวตาราง */
-  text-align: left;
-}
-
-.styled-table th,
-.styled-table td {
-  padding: 12px 15px;
-  /* ระยะห่างภายในเซลล์ */
-  /* เพิ่มบรรทัดนี้: ให้แน่ใจว่าเซลล์มีเส้นขอบด้านข้างด้วย */
-  border-right: 1px solid #dddddd;
-}
-
-.styled-table tbody tr {
-  border-bottom: 1px solid #dddddd;
-  /* เส้นขอบล่างของแถวข้อมูล */
 }
