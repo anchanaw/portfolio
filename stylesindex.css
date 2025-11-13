@@ -79,16 +79,54 @@ section {
   padding: 0 20px;
 }
 
-#home h1 {
+.detail-home h1 {
   font-family: "Kodchasan", sans-serif;
-  font-size: 3rem;
-  color: #fff;
-  margin: 5px;
+  margin: 10px 0;
+  line-height: 1.3;
 }
 
-.detail-home h1 {
-  margin: 10px 0;
+/* ประโยคหลักใหญ่ที่สุด */
+.detail-home h1:first-child {
+  font-size: 3rem;
+}
+
+/* ประโยครอง / Typing effect */
+.detail-home h1:nth-child(2) {
   font-size: 2.5rem;
+}
+
+/* ------------------------------
+ Typing Effect
+------------------------------ */
+.typing {
+  display: inline-block;
+  border-right: 2px solid #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 3s steps(30, end) forwards, blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Optional: ขยายข้อความเมื่อ hover */
+.detail-home h1:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
 /* ------------------------------
@@ -155,6 +193,25 @@ section {
   padding-left: 20px;
   font-size: 1.1rem;
   line-height: 1.8;
+}
+
+.game-logos {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.game-logos img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.game-logos img:hover {
+  transform: scale(1.1);
 }
 
 .favorite-music iframe {
@@ -352,11 +409,16 @@ section {
 }
 
 .contact-item img {
-  width: 40px;           /* ความกว้างเท่ากัน */
-  height: 40px;          /* ความสูงเท่ากัน */
-  border-radius: 10px;   /* มุมโค้งนิด ๆ */
-  object-fit: cover;     /* ครอบภาพให้อยู่ในกรอบพอดี */
-  flex-shrink: 0;        /* ป้องกันไม่ให้รูปย่อเมื่อจอแคบ */
+  width: 40px;
+  /* ความกว้างเท่ากัน */
+  height: 40px;
+  /* ความสูงเท่ากัน */
+  border-radius: 10px;
+  /* มุมโค้งนิด ๆ */
+  object-fit: cover;
+  /* ครอบภาพให้อยู่ในกรอบพอดี */
+  flex-shrink: 0;
+  /* ป้องกันไม่ให้รูปย่อเมื่อจอแคบ */
 }
 
 .contact-item a,
