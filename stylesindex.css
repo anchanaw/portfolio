@@ -1,16 +1,10 @@
-/* 💡 Smooth scroll */
 html {
   scroll-behavior: smooth;
 }
 
-/* ------------------------------
- 🎨 Font & Theme Setup
------------------------------- */
-@import url("https://fonts.googleapis.com/css2?family=Kodchasan:wght@300;400;500;600&family=Merriweather:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+);
 
-/* ------------------------------
- 🧱 Base Styles
------------------------------- */
 body {
   margin: 0;
   font-family: "Kodchasan", sans-serif;
@@ -18,9 +12,6 @@ body {
   background-color: #fdfdfd;
 }
 
-/* ------------------------------
- 🧭 Navigation Bar
------------------------------- */
 nav {
   position: fixed;
   top: 0;
@@ -46,7 +37,6 @@ nav a:hover {
   color: #ffd700;
 }
 
-/* ป้องกันเนื้อหาถูกบังโดย nav */
 section {
   min-height: 100vh;
   display: flex;
@@ -66,7 +56,7 @@ section {
 }
 
 /* ------------------------------
- 🏠 Home Section
+  Home Section
 ------------------------------ */
 #home {
   height: 100vh;
@@ -85,12 +75,10 @@ section {
   line-height: 1.3;
 }
 
-/* ประโยคหลักใหญ่ที่สุด */
 .detail-home h1:first-child {
   font-size: 3rem;
 }
 
-/* ประโยครอง / Typing effect */
 .detail-home h1:nth-child(2) {
   font-size: 2.5rem;
 }
@@ -123,14 +111,9 @@ section {
   }
 }
 
-/* Optional: ขยายข้อความเมื่อ hover */
-.detail-home h1:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
-}
 
 /* ------------------------------
- 👩‍💼 About Section
+ About Section
 ------------------------------ */
 #about {
   background: linear-gradient(to bottom, #7557f8, #9261d2);
@@ -164,7 +147,6 @@ section {
   padding: 25px;
   text-align: center;
   color: #fff;
-  transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -223,21 +205,9 @@ section {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* 📱 Responsive */
-@media (max-width: 1024px) {
-  .about-card {
-    flex: 1 1 45%;
-  }
-}
-
-@media (max-width: 768px) {
-  .about-card {
-    flex: 1 1 90%;
-  }
-}
 
 /* ------------------------------
- 💻 Skills Section
+  Skills Section
 ------------------------------ */
 #skills {
   background: linear-gradient(to bottom, #9261d2, #f557e5);
@@ -288,7 +258,7 @@ section {
 }
 
 /* ------------------------------
- 🧩 Projects Section
+Projects Section
 ------------------------------ */
 #projects {
   background: linear-gradient(to bottom, #f557c8, #ed4c9a);
@@ -324,7 +294,7 @@ section {
 }
 
 /* ------------------------------
- 🧩 Experience Section
+ Experience Section
 ------------------------------ */
 #experience {
   background: linear-gradient(to bottom, #f557e5, #f557c8);
@@ -346,7 +316,7 @@ section {
 }
 
 /* ------------------------------
- 🧾 Styled Table
+ Styled Table
 ------------------------------ */
 .styled-table {
   border-collapse: collapse;
@@ -375,7 +345,7 @@ section {
 }
 
 /* ------------------------------
- ☎️ Contact Section
+ Contact Section
 ------------------------------ */
 #contact {
   background: #ed4c9a;
@@ -410,15 +380,10 @@ section {
 
 .contact-item img {
   width: 40px;
-  /* ความกว้างเท่ากัน */
   height: 40px;
-  /* ความสูงเท่ากัน */
   border-radius: 10px;
-  /* มุมโค้งนิด ๆ */
   object-fit: cover;
-  /* ครอบภาพให้อยู่ในกรอบพอดี */
   flex-shrink: 0;
-  /* ป้องกันไม่ให้รูปย่อเมื่อจอแคบ */
 }
 
 .contact-item a,
@@ -434,7 +399,7 @@ section {
 }
 
 /* ------------------------------
- 📱 Responsive Design
+ Responsive Design
 ------------------------------ */
 @media (max-width: 768px) {
 
@@ -462,5 +427,17 @@ section {
   nav a {
     margin: 0 10px;
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about-card {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-card {
+    flex: 1 1 90%;
   }
 }
