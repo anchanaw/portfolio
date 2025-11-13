@@ -45,7 +45,6 @@ section {
   padding: 20px 30px;
   scroll-margin-top: 65px;
   color: #fff;
-  transition: background 0.5s ease;
 }
 
 .detail-about,
@@ -398,6 +397,10 @@ Projects Section
   color: #ffd700;
 }
 
+.detail-contact h1{
+  font-size: 3rem;
+  margin-bottom: 20px
+}
 /* ------------------------------
  Responsive Design
 ------------------------------ */
