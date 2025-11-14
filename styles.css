@@ -48,6 +48,7 @@ section {
 
 .detail-about,
 .detail-skill,
+.detail-experience,
 .detail-projects,
 .detail-contact {
   scroll-margin-top: 45px;
@@ -350,56 +351,78 @@ Projects Section
   background-color: rgba(255, 255, 255, 0.13);
   padding: 60px;
   border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-  color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
   width: 90%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-start; /* ให้ h1 ชิดซ้าย */
+  gap: 40px;
+}
+
+.detail-contact h1 {
+  font-size: 3rem;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+/* Grid 3 บน 3 ล่าง */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 card ต่อแถว */
   gap: 25px;
-}
-
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 20px;
   width: 100%;
-  margin-left: 60px;
-  padding: 25px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.contact-item:last-child {
-  border-bottom: none;
+/* Card แต่ละใบ */
+.contact-card {
+  background: rgba(255,255,255,0.15);
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.contact-item img {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  object-fit: cover;
-  flex-shrink: 0;
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
 }
 
-.contact-item a,
-.contact-item p {
-  font-size: 1.4rem;
+/* ไอคอน */
+.contact-card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+/* ข้อความ */
+.contact-card p {
+  font-weight: bold;
+  margin: 5px 0;
+  color: #fff;
+}
+
+.contact-card a {
   color: #fff;
   text-decoration: none;
   transition: color 0.3s;
 }
 
-.contact-item a:hover {
+.contact-card a:hover {
   color: #ffd700;
 }
 
-.detail-contact h1{
-  font-size: 3rem;
-  margin-bottom: 20px
+/* Responsive สำหรับมือถือ */
+@media (max-width: 768px) {
+  .detail-contact {
+    padding: 40px 20px;
+  }
 }
+
 /* ------------------------------
  Responsive Design
------------------------------- */
+------------------------------ 
 @media (max-width: 768px) {
 
   .detail-about,
@@ -414,7 +437,7 @@ Projects Section
     width: 200px;
   }
 
-  .detail-contact {
+  /*.detail-contact {
     align-items: center;
   }
 
@@ -439,4 +462,4 @@ Projects Section
   .about-card {
     flex: 1 1 90%;
   }
-}
+}*/
