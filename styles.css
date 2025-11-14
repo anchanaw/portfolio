@@ -113,72 +113,102 @@ section {
 /* ------------------------------
  About Section
 ------------------------------ */
+/* พื้นหลัง section #about */
 #about {
   background: linear-gradient(to bottom, #7557f8, #9261d2);
-  padding: 80px 0;
-  display: flex;
-  justify-content: center;
+  padding: 80px 20px;
+  /* เว้นขอบบน-ล่าง และซ้าย-ขวา */
 }
-
 .detail-about {
   background-color: rgba(255, 255, 255, 0.13);
-  padding: 30px;
+  padding: 60px;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   color: #fff;
   width: 90%;
+}
+/* container หลักสำหรับการ์ดย่อย */
+.about-card {
   display: flex;
-  justify-content: space-around;
-  align-items: stretch;
-  gap: 30px;
+  flex-direction: row;
+  /* เรียงแนวนอน */
+  justify-content: space-between;
+  gap: 25px;
+  /* ช่องว่างระหว่างการ์ดย่อย */
   flex-wrap: wrap;
-  scroll-margin-top: 10px;
+  /* ถ้าแคบเกินจะลงบรรทัดใหม่ */
 }
 
-/* 🎴 การ์ดแต่ละใบ */
-.about-card {
+/* การ์ดย่อย */
+.about-card>div {
   flex: 1;
-  min-width: 280px;
+  /* กินพื้นที่เท่า ๆ กัน */
+  min-width: 350px;
   background-color: rgba(255, 255, 255, 0.08);
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  padding: 25px;
-  text-align: center;
+  padding: 20px;
   color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
+/* h2 ทุกการ์ด */
 .about-card h2 {
   color: #ffd700;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 }
 
-.about-card img {
-  width: 200px;
-  border-radius: 15px;
-  margin-bottom: 5px;
-}
-
-.about-text p {
-  margin: 5px 0;
-  font-size: 1.2rem;
-}
-
+/* list ของ hobbies */
 .hobbies ul {
   list-style-type: circle;
-  text-align: left;
   padding-left: 20px;
-  font-size: 1.1rem;
-  line-height: 1.8;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
+.hobbies li {
+  text-align: left;
+}
+
+.natural-img {
+  display: block;
+  margin: 15px 0 0 50px;
+  max-width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  /* มุมโค้ง */
+  margin-top: 25px;
+}
+
+/* รูปทั่วไปใน hobbies (เช่น ภาพธรรมชาติ) */
+.profile-img {
+  align-items: center;
+  width: 200px;
+  /* ขนาดรูปปรับตามต้องการ */
+  height: auto;
+  /* รักษาสัดส่วน */
+  border-radius: 10px;
+  /* มุมโค้ง */
+  margin-top: 15px;
+  /* เว้นระยะบน */
+  object-fit: cover;
+  /* ครอบเต็มกรอบ */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  /* เงา */
+  transition: transform 0.3s ease;
+}
+
+/* effect hover */
+.about-card img:hover {
+  transform: scale(1.1);
+  /* ขยายเมื่อ hover */
+}
+
+/* game logos */
 .game-logos {
   display: flex;
-  gap: 15px;
-  margin-top: 10px;
-  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 1.2px;
 }
 
 .game-logos img {
@@ -187,21 +217,41 @@ section {
   object-fit: contain;
   border-radius: 8px;
   transition: transform 0.3s;
+  margin-bottom: 15px;
 }
 
 .game-logos img:hover {
   transform: scale(1.1);
 }
 
-.about-favorite-music iframe {
+/* iframe เพลง */
+.favorite-music iframe {
   width: 100%;
+  margin-top: 15px;
   max-width: 400px;
   height: 230px;
   border-radius: 12px;
-  margin-top: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Responsive */
+@media (max-width: 1024px) {
+  .about-card {
+    flex-direction: column;
+    /* เรียงแนวตั้งบน tablet/mobile */
+    align-items: center;
+  }
+
+  .about-card>div {
+    width: 100%;
+    /* การ์ดกินเต็ม container */
+  }
+
+  .game-logos {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
 
 /* ------------------------------
   Skills Section
@@ -351,12 +401,13 @@ Projects Section
   background-color: rgba(255, 255, 255, 0.13);
   padding: 60px;
   border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   width: 90%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* ให้ h1 ชิดซ้าย */
+  align-items: flex-start;
+  /* ให้ h1 ชิดซ้าย */
   gap: 40px;
 }
 
@@ -369,24 +420,25 @@ Projects Section
 /* Grid 3 บน 3 ล่าง */
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 card ต่อแถว */
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 card ต่อแถว */
   gap: 25px;
   width: 100%;
 }
 
 /* Card แต่ละใบ */
 .contact-card {
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
   padding: 25px;
   border-radius: 15px;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .contact-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
 
 /* ไอคอน */
