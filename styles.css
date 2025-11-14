@@ -170,38 +170,26 @@ section {
   text-align: left;
 }
 
-.natural-img {
-  display: block;
-  margin: 15px 0 0 50px;
-  max-width: 200px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  /* มุมโค้ง */
-  margin-top: 25px;
-}
-
-/* รูปทั่วไปใน hobbies (เช่น ภาพธรรมชาติ) */
+.natural-img,
 .profile-img {
-  align-items: center;
-  width: 200px;
-  /* ขนาดรูปปรับตามต้องการ */
-  height: auto;
-  /* รักษาสัดส่วน */
+  max-width: 200px;
   border-radius: 10px;
-  /* มุมโค้ง */
-  margin-top: 15px;
-  /* เว้นระยะบน */
-  object-fit: cover;
-  /* ครอบเต็มกรอบ */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  /* เงา */
-  transition: transform 0.3s ease;
 }
 
-/* effect hover */
-.about-card img:hover {
+.natural-img {
+  margin: 25px 0 0 50px;
+}
+
+.profile-img {
+  margin-top: 15px;
+  object-fit: cover;
+}
+
+
+.profile-img:hover,
+.natural-img:hover {
   transform: scale(1.1);
-  /* ขยายเมื่อ hover */
 }
 
 /* game logos */
@@ -276,7 +264,7 @@ section {
 
 .detail-skill h4 {
   font-size: 1.8rem;
-  margin: 15px 0 10px;
+  margin: 50px 0 10px;
 }
 
 .detail-skill p {
