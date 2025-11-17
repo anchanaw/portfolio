@@ -175,7 +175,9 @@ section {
 
 .game-logos {
   display: flex;
+  justify-content: center;
   gap: 10px;
+  flex-wrap: wrap;
   margin-top: 1.2px;
 }
 
@@ -402,23 +404,23 @@ Projects Section
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;    
+    flex-direction: column;
     gap: 30px;
     width: 100%;
   }
 
   .about-card {
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
     align-items: center;
     width: 100%;
     gap: 30px;
   }
 
-  .about-card > div {
+  .about-card>div {
     width: 90%;
-    max-width: 650px;          
-    min-height: 550px;         
+    max-width: 650px;
+    min-height: 550px;
     border-radius: 20px;
     padding: 25px;
     display: flex;
@@ -432,9 +434,5 @@ Projects Section
     margin: 0 auto;
   }
 
-  .game-logos {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+  
 }
-
