@@ -42,23 +42,15 @@ section {
   justify-content: center;
   align-items: flex-start;
   padding: 20px 30px;
-  scroll-margin-top: 65px;
+  scroll-margin-top: 50px;
   color: #fff;
 }
 
-.detail-about,
-.detail-skill,
-.detail-experience,
-.detail-projects,
-.detail-contact {
-  scroll-margin-top: 45px;
-}
 
 /* ------------------------------
   Home Section
 ------------------------------ */
 #home {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,36 +105,28 @@ section {
 /* ------------------------------
  About Section
 ------------------------------ */
-/* พื้นหลัง section #about */
 #about {
   background: linear-gradient(to bottom, #7557f8, #9261d2);
-  padding: 80px 20px;
-  /* เว้นขอบบน-ล่าง และซ้าย-ขวา */
 }
+
 .detail-about {
-  background-color: rgba(255, 255, 255, 0.13);
   padding: 60px;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   color: #fff;
   width: 90%;
 }
-/* container หลักสำหรับการ์ดย่อย */
+
 .about-card {
   display: flex;
   flex-direction: row;
-  /* เรียงแนวนอน */
   justify-content: space-between;
   gap: 25px;
-  /* ช่องว่างระหว่างการ์ดย่อย */
   flex-wrap: wrap;
-  /* ถ้าแคบเกินจะลงบรรทัดใหม่ */
 }
 
-/* การ์ดย่อย */
 .about-card>div {
   flex: 1;
-  /* กินพื้นที่เท่า ๆ กัน */
   min-width: 350px;
   background-color: rgba(255, 255, 255, 0.08);
   border-radius: 15px;
@@ -152,13 +136,11 @@ section {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-/* h2 ทุกการ์ด */
 .about-card h2 {
   color: #ffd700;
   margin-bottom: 8px;
 }
 
-/* list ของ hobbies */
 .hobbies ul {
   list-style-type: circle;
   padding-left: 20px;
@@ -178,7 +160,7 @@ section {
 }
 
 .natural-img {
-  margin: 25px 0 0 50px;
+  margin: 30px 0 0 75px;
 }
 
 .profile-img {
@@ -186,13 +168,11 @@ section {
   object-fit: cover;
 }
 
-
 .profile-img:hover,
 .natural-img:hover {
   transform: scale(1.1);
 }
 
-/* game logos */
 .game-logos {
   display: flex;
   gap: 10px;
@@ -212,7 +192,6 @@ section {
   transform: scale(1.1);
 }
 
-/* iframe เพลง */
 .favorite-music iframe {
   width: 100%;
   margin-top: 15px;
@@ -220,25 +199,6 @@ section {
   height: 230px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-  .about-card {
-    flex-direction: column;
-    /* เรียงแนวตั้งบน tablet/mobile */
-    align-items: center;
-  }
-
-  .about-card>div {
-    width: 100%;
-    /* การ์ดกินเต็ม container */
-  }
-
-  .game-logos {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
 }
 
 /* ------------------------------
@@ -249,7 +209,6 @@ section {
 }
 
 .detail-skill {
-  background-color: rgba(255, 255, 255, 0.13);
   padding: 60px;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
@@ -259,18 +218,14 @@ section {
 
 .detail-skill h1 {
   font-size: 3rem;
-  margin: 15px 0 10px;
+  margin-bottom: 45px;
 }
 
 .detail-skill h4 {
   font-size: 1.8rem;
-  margin: 50px 0 10px;
+  margin: 25px 0 10px;
 }
 
-.detail-skill p {
-  font-size: 1.3rem;
-  margin-left: 25px;
-}
 
 .skill-icons {
   display: flex;
@@ -300,7 +255,6 @@ Projects Section
 }
 
 .detail-projects {
-  background-color: rgba(255, 255, 255, 0.13);
   padding: 60px;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
@@ -314,10 +268,6 @@ Projects Section
   margin-bottom: 20px;
 }
 
-.detail-projects p {
-  font-size: 1.4rem;
-  margin-left: 25px;
-}
 
 .detail-projects iframe {
   display: block;
@@ -336,7 +286,6 @@ Projects Section
 }
 
 .detail-experience {
-  background-color: rgba(255, 255, 255, 0.13);
   padding: 60px;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
@@ -386,35 +335,28 @@ Projects Section
 }
 
 .detail-contact {
-  background-color: rgba(255, 255, 255, 0.13);
   padding: 60px;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   width: 90%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  /* ให้ h1 ชิดซ้าย */
   gap: 40px;
 }
 
 .detail-contact h1 {
   font-size: 3rem;
-  margin-bottom: 0;
   text-align: left;
 }
 
-/* Grid 3 บน 3 ล่าง */
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* 3 card ต่อแถว */
   gap: 25px;
   width: 100%;
 }
 
-/* Card แต่ละใบ */
 .contact-card {
   background: rgba(255, 255, 255, 0.15);
   padding: 25px;
@@ -429,14 +371,12 @@ Projects Section
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
 
-/* ไอคอน */
 .contact-card img {
   width: 50px;
   height: 50px;
   margin-bottom: 10px;
 }
 
-/* ข้อความ */
 .contact-card p {
   font-weight: bold;
   margin: 5px 0;
@@ -453,53 +393,48 @@ Projects Section
   color: #ffd700;
 }
 
-/* Responsive สำหรับมือถือ */
-@media (max-width: 768px) {
-  .detail-contact {
-    padding: 40px 20px;
-  }
-}
-
 /* ------------------------------
- Responsive Design
------------------------------- 
-@media (max-width: 768px) {
+ Responsive Design 
+------------------------------ */
+@media (max-width: 1024px) {
 
-  .detail-about,
-  .detail-skill,
-  .detail-projects,
-  .detail-contact {
+  .detail-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;    
+    gap: 30px;
+    width: 100%;
+  }
+
+  .about-card {
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+  }
+
+  .about-card > div {
+    width: 90%;
+    max-width: 650px;          
+    min-height: 550px;         
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
     flex-direction: column;
-    text-align: center;
-  }
-
-  .detail-about img {
-    width: 200px;
-  }
-
-  /*.detail-contact {
+    justify-content: flex-start;
     align-items: center;
   }
 
-  .detail-projects iframe {
-    width: 100%;
-    height: 600px;
+  .about-card img {
+    display: block;
+    margin: 0 auto;
   }
 
-  nav a {
-    margin: 0 10px;
-    font-size: 0.9rem;
+  .game-logos {
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
 
-@media (max-width: 1024px) {
-  .about-card {
-    flex: 1 1 45%;
-  }
-}
-
-@media (max-width: 768px) {
-  .about-card {
-    flex: 1 1 90%;
-  }
-}*/
